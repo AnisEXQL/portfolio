@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Portfolio Anis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* HEADER */
+        .doc-header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+            border-bottom: 2px solid #C0C0C0;
+            margin-bottom: 60px;
+        }
+
+        .doc-header h1 {
+            font-size: 2.5rem;
+            color: #C0C0C0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        .doc-header p {
+            color: #888;
+            font-size: 1.2rem;
+        }
+
+        /* NAVIGATION */
+        .doc-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: rgba(192, 192, 192, 0.1);
+            border: 2px solid rgba(192, 192, 192, 0.3);
+            border-radius: 10px;
+            color: #C0C0C0;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #C0C0C0;
+            color: #0a0a0a;
+        }
+
+        .nav-btn img {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* SECTIONS */
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(192, 192, 192, 0.2);
+        }
+
+        .section-header img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-intro {
+            background: rgba(192, 192, 192, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            border-left: 4px solid #C0C0C0;
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            color: #aaa;
+        }
+
+        /* BALISES */
+        .balises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .balise-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(192, 192, 192, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .balise-card:hover {
+            border-color: #C0C0C0;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(192, 192, 192, 0.1);
+        }
+
+        .balise-name {
+            font-family: 'Courier New', monospace;
+            font-size: 1.3rem;
+            color: #C0C0C0;
+            margin-bottom: 15px;
+            padding: 10px 15px;
+            background: rgba(192, 192, 192, 0.1);
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        .balise-desc {
+            color: #aaa;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        .balise-example {
+            background: #1a1a1a;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        .balise-example code {
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #7ec8e3;
+            white-space: pre-wrap;
+        }
+
+        /* CODE COLORS */
+        .tag { color: #e06c75; }
+        .attr { color: #d19a66; }
+        .value { color: #98c379; }
+        .comment { color: #5c6370; }
+        .property { color: #c678dd; }
+        .selector { color: #e5c07b; }
+        .keyword { color: #c678dd; }
+        .function { color: #61afef; }
+        .string { color: #98c379; }
+
+        /* CATÉGORIES */
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            color: #C0C0C0;
+            margin-bottom: 25px;
+            padding-left: 15px;
+            border-left: 4px solid #C0C0C0;
+        }
+
+        /* FOOTER */
+        .doc-footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(192, 192, 192, 0.2);
+            margin-top: 60px;
+        }
+
+        .doc-footer p {
+            color: #666;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .doc-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .balises-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="doc-header">
+        <h1>Documentation Portfolio</h1>
+        <p>Guide des balises HTML, CSS et JavaScript utilisées</p>
+    </header>
+
+    <div class="container">
+
+        <!-- NAVIGATION -->
+        <nav class="doc-nav">
+            <a href="#html" class="nav-btn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                HTML
+            </a>
+            <a href="#css" class="nav-btn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">
+                CSS
+            </a>
+            <a href="#js" class="nav-btn">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                JavaScript
+            </a>
+        </nav>
+
+        <!-- ========================================
+             SECTION HTML
+             ======================================== -->
+        <section id="html" class="section">
+            <div class="section-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <h2>HTML5</h2>
+            </div>
+
+            <div class="section-intro">
+                <p><strong>HTML (HyperText Markup Language)</strong> est le langage de balisage qui structure le contenu des pages web. Chaque balise définit un élément de la page.</p>
+            </div>
+
+            <!-- Structure de base -->
+            <div class="category">
+                <h3 class="category-title">Structure de base</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;!DOCTYPE html&gt;</div>
+                        <p class="balise-desc">Déclaration qui indique au navigateur qu'il s'agit d'un document HTML5.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;!DOCTYPE html&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;html&gt;</div>
+                        <p class="balise-desc">Élément racine qui contient tout le document HTML. L'attribut <code>lang</code> définit la langue.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;html</span> <span class="attr">lang</span>=<span class="value">"fr"</span><span class="tag">&gt;</span>...<span class="tag">&lt;/html&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;head&gt;</div>
+                        <p class="balise-desc">Contient les métadonnées de la page (titre, liens CSS, favicon, etc.). Non visible sur la page.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;head&gt;</span>
+  <span class="tag">&lt;title&gt;</span>Mon site<span class="tag">&lt;/title&gt;</span>
+<span class="tag">&lt;/head&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;body&gt;</div>
+                        <p class="balise-desc">Contient tout le contenu visible de la page web (texte, images, vidéos, etc.).</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;body&gt;</span>
+  <span class="comment">&lt;!-- Contenu visible --&gt;</span>
+<span class="tag">&lt;/body&gt;</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Métadonnées -->
+            <div class="category">
+                <h3 class="category-title">Métadonnées (dans &lt;head&gt;)</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;meta charset&gt;</div>
+                        <p class="balise-desc">Définit l'encodage des caractères. UTF-8 permet d'afficher les accents et caractères spéciaux.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;meta</span> <span class="attr">charset</span>=<span class="value">"UTF-8"</span><span class="tag">&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;meta viewport&gt;</div>
+                        <p class="balise-desc">Essentiel pour le responsive design. Adapte la page aux écrans mobiles.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;meta</span> <span class="attr">name</span>=<span class="value">"viewport"</span> <span class="attr">content</span>=<span class="value">"width=device-width, initial-scale=1.0"</span><span class="tag">&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;title&gt;</div>
+                        <p class="balise-desc">Titre de la page affiché dans l'onglet du navigateur et dans les résultats Google.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;title&gt;</span>Portfolio Anis<span class="tag">&lt;/title&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;link&gt;</div>
+                        <p class="balise-desc">Lie des ressources externes comme les fichiers CSS ou la favicon.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"stylesheet"</span> <span class="attr">href</span>=<span class="value">"css/style.css"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;link</span> <span class="attr">rel</span>=<span class="value">"icon"</span> <span class="attr">href</span>=<span class="value">"images/logo.png"</span><span class="tag">&gt;</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Structuration -->
+            <div class="category">
+                <h3 class="category-title">Structuration sémantique</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;header&gt;</div>
+                        <p class="balise-desc">En-tête de la page ou d'une section. Contient souvent le logo et la navigation.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;header</span> <span class="attr">class</span>=<span class="value">"header"</span><span class="tag">&gt;</span>
+  <span class="comment">&lt;!-- Logo + Navigation --&gt;</span>
+<span class="tag">&lt;/header&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;nav&gt;</div>
+                        <p class="balise-desc">Zone de navigation contenant les liens vers les différentes pages du site.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;nav</span> <span class="attr">class</span>=<span class="value">"nav"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;ul&gt;</span>
+    <span class="tag">&lt;li&gt;&lt;a</span> <span class="attr">href</span>=<span class="value">"index.html"</span><span class="tag">&gt;</span>Accueil<span class="tag">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="tag">&lt;/ul&gt;</span>
+<span class="tag">&lt;/nav&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;section&gt;</div>
+                        <p class="balise-desc">Regroupe un contenu thématique. Utilisé pour diviser la page en parties logiques.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;section</span> <span class="attr">class</span>=<span class="value">"stage-section"</span><span class="tag">&gt;</span>
+  <span class="comment">&lt;!-- Contenu du stage --&gt;</span>
+<span class="tag">&lt;/section&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;footer&gt;</div>
+                        <p class="balise-desc">Pied de page contenant les informations de copyright, liens légaux, etc.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;footer</span> <span class="attr">class</span>=<span class="value">"footer-portfolio"</span><span class="tag">&gt;</span>
+  <span class="comment">&lt;!-- Copyright + Liens --&gt;</span>
+<span class="tag">&lt;/footer&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;div&gt;</div>
+                        <p class="balise-desc">Conteneur générique sans signification sémantique. Utilisé pour grouper des éléments et appliquer du CSS.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"stage-content"</span><span class="tag">&gt;</span>
+  <span class="comment">&lt;!-- Contenu --&gt;</span>
+<span class="tag">&lt;/div&gt;</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Titres et texte -->
+            <div class="category">
+                <h3 class="category-title">Titres et texte</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;h1&gt; à &lt;h6&gt;</div>
+                        <p class="balise-desc">Titres hiérarchiques. h1 est le plus important (1 seul par page), h6 le moins important.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;h1&gt;</span>Titre principal<span class="tag">&lt;/h1&gt;</span>
+<span class="tag">&lt;h2&gt;</span>Sous-titre<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;h3&gt;</span>Sous-sous-titre<span class="tag">&lt;/h3&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;p&gt;</div>
+                        <p class="balise-desc">Paragraphe de texte. Élément de base pour le contenu textuel.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;p&gt;</span>Ceci est un paragraphe de texte.<span class="tag">&lt;/p&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;strong&gt;</div>
+                        <p class="balise-desc">Texte important mis en gras. A une valeur sémantique (importance).</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;strong&gt;</span>Texte important<span class="tag">&lt;/strong&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;span&gt;</div>
+                        <p class="balise-desc">Conteneur en ligne pour styliser une partie de texte sans créer de nouveau bloc.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;span</span> <span class="attr">class</span>=<span class="value">"silver"</span><span class="tag">&gt;</span>texte coloré<span class="tag">&lt;/span&gt;</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Listes -->
+            <div class="category">
+                <h3 class="category-title">Listes</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;ul&gt;</div>
+                        <p class="balise-desc">Liste non ordonnée (à puces). Contient des éléments &lt;li&gt;.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;ul</span> <span class="attr">class</span>=<span class="value">"stage-missions"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Mission 1<span class="tag">&lt;/li&gt;</span>
+  <span class="tag">&lt;li&gt;</span>Mission 2<span class="tag">&lt;/li&gt;</span>
+<span class="tag">&lt;/ul&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;li&gt;</div>
+                        <p class="balise-desc">Élément de liste. Doit être contenu dans &lt;ul&gt; ou &lt;ol&gt;.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;li&gt;</span>Élément de la liste<span class="tag">&lt;/li&gt;</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Liens et médias -->
+            <div class="category">
+                <h3 class="category-title">Liens et médias</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;a&gt;</div>
+                        <p class="balise-desc">Lien hypertexte. <code>href</code> définit la destination, <code>target="_blank"</code> ouvre dans un nouvel onglet.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;a</span> <span class="attr">href</span>=<span class="value">"https://site.com"</span> <span class="attr">target</span>=<span class="value">"_blank"</span><span class="tag">&gt;</span>
+  Voir le site
+<span class="tag">&lt;/a&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;img&gt;</div>
+                        <p class="balise-desc">Image. <code>src</code> = chemin de l'image, <code>alt</code> = texte alternatif (accessibilité + SEO).</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="value">"images/logo.png"</span> <span class="attr">alt</span>=<span class="value">"Logo"</span> <span class="attr">class</span>=<span class="value">"footer-logo"</span><span class="tag">&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;video&gt;</div>
+                        <p class="balise-desc">Lecteur vidéo. Les attributs contrôlent la lecture automatique, en boucle, sans son.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;video</span> <span class="attr">autoplay</span> <span class="attr">muted</span> <span class="attr">loop</span> <span class="attr">playsinline</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;source</span> <span class="attr">src</span>=<span class="value">"videos/bg.mp4"</span> <span class="attr">type</span>=<span class="value">"video/mp4"</span><span class="tag">&gt;</span>
+<span class="tag">&lt;/video&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;svg&gt;</div>
+                        <p class="balise-desc">Image vectorielle intégrée directement dans le HTML. Personnalisable via CSS.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;svg</span> <span class="attr">width</span>=<span class="value">"24"</span> <span class="attr">height</span>=<span class="value">"24"</span> <span class="attr">viewBox</span>=<span class="value">"0 0 24 24"</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;circle</span> <span class="attr">cx</span>=<span class="value">"12"</span> <span class="attr">cy</span>=<span class="value">"12"</span> <span class="attr">r</span>=<span class="value">"10"</span><span class="tag">&gt;&lt;/circle&gt;</span>
+<span class="tag">&lt;/svg&gt;</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulaires -->
+            <div class="category">
+                <h3 class="category-title">Formulaires</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;form&gt;</div>
+                        <p class="balise-desc">Conteneur de formulaire. Regroupe les champs de saisie.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;form</span> <span class="attr">id</span>=<span class="value">"contactForm"</span><span class="tag">&gt;</span>
+  <span class="comment">&lt;!-- Champs --&gt;</span>
+<span class="tag">&lt;/form&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;input&gt;</div>
+                        <p class="balise-desc">Champ de saisie. Le <code>type</code> définit le format (text, email, password...).</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">placeholder</span>=<span class="value">"Votre nom"</span> <span class="attr">required</span><span class="tag">&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">type</span>=<span class="value">"email"</span> <span class="attr">placeholder</span>=<span class="value">"Votre email"</span><span class="tag">&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;textarea&gt;</div>
+                        <p class="balise-desc">Zone de texte multiligne pour les messages longs.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;textarea</span> <span class="attr">placeholder</span>=<span class="value">"Votre message"</span> <span class="attr">required</span><span class="tag">&gt;&lt;/textarea&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;select&gt;</div>
+                        <p class="balise-desc">Liste déroulante. Contient des &lt;option&gt; pour les choix.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;select</span> <span class="attr">required</span><span class="tag">&gt;</span>
+  <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">""</span><span class="tag">&gt;</span>Choisir...<span class="tag">&lt;/option&gt;</span>
+  <span class="tag">&lt;option</span> <span class="attr">value</span>=<span class="value">"stage"</span><span class="tag">&gt;</span>Stage<span class="tag">&lt;/option&gt;</span>
+<span class="tag">&lt;/select&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;button&gt;</div>
+                        <p class="balise-desc">Bouton cliquable. <code>type="submit"</code> envoie le formulaire.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;button</span> <span class="attr">type</span>=<span class="value">"submit"</span> <span class="attr">class</span>=<span class="value">"btn-submit"</span><span class="tag">&gt;</span>
+  Envoyer
+<span class="tag">&lt;/button&gt;</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">&lt;label&gt;</div>
+                        <p class="balise-desc">Étiquette associée à un champ. Améliore l'accessibilité.</p>
+                        <div class="balise-example">
+                            <code><span class="tag">&lt;label</span> <span class="attr">for</span>=<span class="value">"email"</span><span class="tag">&gt;</span>Email<span class="tag">&lt;/label&gt;</span>
+<span class="tag">&lt;input</span> <span class="attr">id</span>=<span class="value">"email"</span> <span class="attr">type</span>=<span class="value">"email"</span><span class="tag">&gt;</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             SECTION CSS
+             ======================================== -->
+        <section id="css" class="section">
+            <div class="section-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <h2>CSS3</h2>
+            </div>
+
+            <div class="section-intro">
+                <p><strong>CSS (Cascading Style Sheets)</strong> définit l'apparence visuelle de la page : couleurs, tailles, espacements, animations, mise en page, etc.</p>
+            </div>
+
+            <!-- Variables CSS -->
+            <div class="category">
+                <h3 class="category-title">Variables CSS (Custom Properties)</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">:root</div>
+                        <p class="balise-desc">Sélecteur qui cible la racine du document. Utilisé pour déclarer des variables CSS globales.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">:root</span> {
+  <span class="property">--silver</span>: <span class="value">#C0C0C0</span>;
+  <span class="property">--bg-black</span>: <span class="value">#000000</span>;
+  <span class="property">--text-white</span>: <span class="value">#FFFFFF</span>;
+  <span class="property">--text-gray</span>: <span class="value">#AAAAAA</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">var()</div>
+                        <p class="balise-desc">Fonction pour utiliser une variable CSS déclarée avec --.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.element</span> {
+  <span class="property">color</span>: <span class="function">var</span>(<span class="value">--silver</span>);
+  <span class="property">background</span>: <span class="function">var</span>(<span class="value">--bg-black</span>);
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sélecteurs -->
+            <div class="category">
+                <h3 class="category-title">Sélecteurs</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">.classe</div>
+                        <p class="balise-desc">Sélectionne tous les éléments avec cette classe. Le plus utilisé.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-title</span> {
+  <span class="property">font-size</span>: <span class="value">3rem</span>;
+  <span class="property">color</span>: <span class="function">var</span>(<span class="value">--text-white</span>);
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">#id</div>
+                        <p class="balise-desc">Sélectionne l'élément unique avec cet ID. Plus spécifique qu'une classe.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">#contactForm</span> {
+  <span class="property">max-width</span>: <span class="value">600px</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">element</div>
+                        <p class="balise-desc">Sélectionne tous les éléments de ce type (balise HTML).</p>
+                        <div class="balise-example">
+                            <code><span class="selector">body</span> {
+  <span class="property">margin</span>: <span class="value">0</span>;
+  <span class="property">background</span>: <span class="value">#000</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">::before / ::after</div>
+                        <p class="balise-desc">Pseudo-éléments pour ajouter du contenu avant ou après un élément.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-separator::before</span> {
+  <span class="property">content</span>: <span class="value">''</span>;
+  <span class="property">width</span>: <span class="value">60%</span>;
+  <span class="property">height</span>: <span class="value">2px</span>;
+  <span class="property">background</span>: <span class="function">var</span>(<span class="value">--silver</span>);
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">:hover</div>
+                        <p class="balise-desc">Pseudo-classe qui s'applique quand la souris survole l'élément.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-btn:hover</span> {
+  <span class="property">transform</span>: <span class="value">translateY(-3px)</span>;
+  <span class="property">box-shadow</span>: <span class="value">0 0 30px rgba(192,192,192,0.5)</span>;
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mise en page -->
+            <div class="category">
+                <h3 class="category-title">Mise en page (Layout)</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">display: flex</div>
+                        <p class="balise-desc">Active Flexbox pour aligner les éléments enfants sur un axe (horizontal ou vertical).</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-buttons</span> {
+  <span class="property">display</span>: <span class="value">flex</span>;
+  <span class="property">gap</span>: <span class="value">20px</span>;
+  <span class="property">align-items</span>: <span class="value">center</span>;
+  <span class="property">justify-content</span>: <span class="value">flex-start</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">display: grid</div>
+                        <p class="balise-desc">Active CSS Grid pour créer des mises en page en lignes et colonnes.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.footer-grid</span> {
+  <span class="property">display</span>: <span class="value">grid</span>;
+  <span class="property">grid-template-columns</span>: <span class="value">1fr 1fr 1fr</span>;
+  <span class="property">gap</span>: <span class="value">40px</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">position</div>
+                        <p class="balise-desc">Définit le positionnement : static, relative, absolute, fixed, sticky.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-overlay</span> {
+  <span class="property">position</span>: <span class="value">absolute</span>;
+  <span class="property">top</span>: <span class="value">0</span>;
+  <span class="property">left</span>: <span class="value">0</span>;
+  <span class="property">width</span>: <span class="value">100%</span>;
+  <span class="property">height</span>: <span class="value">100%</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">z-index</div>
+                        <p class="balise-desc">Définit l'ordre d'empilement des éléments. Plus le nombre est élevé, plus l'élément est devant.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-video-bg</span> {
+  <span class="property">z-index</span>: <span class="value">-2</span>;
+}
+<span class="selector">.stage-overlay</span> {
+  <span class="property">z-index</span>: <span class="value">-1</span>;
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dimensions et espacement -->
+            <div class="category">
+                <h3 class="category-title">Dimensions et espacement</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">padding</div>
+                        <p class="balise-desc">Espace intérieur entre le contenu et la bordure de l'élément.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-content</span> {
+  <span class="property">padding</span>: <span class="value">80px 40px</span>; <span class="comment">/* haut/bas gauche/droite */</span>
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">margin</div>
+                        <p class="balise-desc">Espace extérieur autour de l'élément, entre lui et les autres éléments.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-title</span> {
+  <span class="property">margin-bottom</span>: <span class="value">15px</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">width / height</div>
+                        <p class="balise-desc">Largeur et hauteur de l'élément. Peut être en px, %, rem, vh, vw...</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-section</span> {
+  <span class="property">min-height</span>: <span class="value">100vh</span>; <span class="comment">/* 100% hauteur écran */</span>
+  <span class="property">width</span>: <span class="value">100%</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">max-width</div>
+                        <p class="balise-desc">Largeur maximale. L'élément ne dépassera jamais cette taille.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-content</span> {
+  <span class="property">max-width</span>: <span class="value">900px</span>;
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apparence -->
+            <div class="category">
+                <h3 class="category-title">Apparence</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">background</div>
+                        <p class="balise-desc">Couleur ou image de fond. Peut combiner couleur, dégradé, image.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-overlay</span> {
+  <span class="property">background</span>: <span class="value">rgba(0, 0, 0, 0.65)</span>;
+}
+<span class="selector">.separator</span> {
+  <span class="property">background</span>: <span class="function">linear-gradient</span>(<span class="value">90deg, transparent, #C0C0C0, transparent</span>);
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">border</div>
+                        <p class="balise-desc">Bordure autour de l'élément : épaisseur, style, couleur.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-btn</span> {
+  <span class="property">border</span>: <span class="value">2px solid var(--silver)</span>;
+  <span class="property">border-radius</span>: <span class="value">30px</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">box-shadow</div>
+                        <p class="balise-desc">Ombre portée autour de l'élément. Crée de la profondeur.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-btn:hover</span> {
+  <span class="property">box-shadow</span>: <span class="value">0 0 30px rgba(192,192,192,0.5)</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">backdrop-filter</div>
+                        <p class="balise-desc">Applique des effets (flou, etc.) à l'arrière-plan visible à travers l'élément.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-overlay</span> {
+  <span class="property">backdrop-filter</span>: <span class="value">blur(2px)</span>;
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Typographie -->
+            <div class="category">
+                <h3 class="category-title">Typographie</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">font-family</div>
+                        <p class="balise-desc">Police de caractères. Peut lister plusieurs polices de secours.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-title</span> {
+  <span class="property">font-family</span>: <span class="value">'Orbitron', sans-serif</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">font-size</div>
+                        <p class="balise-desc">Taille du texte. <code>clamp()</code> permet une taille responsive.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-title</span> {
+  <span class="property">font-size</span>: <span class="function">clamp</span>(<span class="value">2rem, 4vw, 3rem</span>);
+  <span class="comment">/* min, préféré, max */</span>
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">color</div>
+                        <p class="balise-desc">Couleur du texte. Accepte hex, rgb, rgba, hsl, noms de couleurs.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-subtitle</span> {
+  <span class="property">color</span>: <span class="function">var</span>(<span class="value">--silver</span>);
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">text-transform</div>
+                        <p class="balise-desc">Transforme le texte : majuscules, minuscules, capitalisation.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-title</span> {
+  <span class="property">text-transform</span>: <span class="value">uppercase</span>;
+  <span class="property">letter-spacing</span>: <span class="value">3px</span>;
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Animations -->
+            <div class="category">
+                <h3 class="category-title">Animations et transitions</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">transition</div>
+                        <p class="balise-desc">Animation fluide lors d'un changement de propriété (ex: au survol).</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-btn</span> {
+  <span class="property">transition</span>: <span class="value">all 0.3s ease</span>;
+}
+<span class="comment">/* Propriété, durée, courbe */</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">transform</div>
+                        <p class="balise-desc">Transforme l'élément : déplacement, rotation, échelle, etc.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.stage-btn:hover</span> {
+  <span class="property">transform</span>: <span class="value">translateY(-3px) scale(1.05)</span>;
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">@keyframes</div>
+                        <p class="balise-desc">Définit les étapes d'une animation personnalisée.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">@keyframes</span> <span class="function">fadeIn</span> {
+  <span class="selector">from</span> { <span class="property">opacity</span>: <span class="value">0</span>; }
+  <span class="selector">to</span> { <span class="property">opacity</span>: <span class="value">1</span>; }
+}</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">animation</div>
+                        <p class="balise-desc">Applique une animation @keyframes à un élément.</p>
+                        <div class="balise-example">
+                            <code><span class="selector">.element</span> {
+  <span class="property">animation</span>: <span class="value">fadeIn 0.8s ease forwards</span>;
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Responsive -->
+            <div class="category">
+                <h3 class="category-title">Responsive Design</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">@media</div>
+                        <p class="balise-desc">Applique des styles uniquement si certaines conditions sont remplies (taille d'écran).</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">@media</span> (<span class="property">max-width</span>: <span class="value">768px</span>) {
+  <span class="selector">.stage-title</span> {
+    <span class="property">font-size</span>: <span class="value">1.8rem</span>;
+  }
+  <span class="selector">.footer-grid</span> {
+    <span class="property">grid-template-columns</span>: <span class="value">1fr</span>;
+  }
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ========================================
+             SECTION JAVASCRIPT
+             ======================================== -->
+        <section id="js" class="section">
+            <div class="section-header">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                <h2>JavaScript</h2>
+            </div>
+
+            <div class="section-intro">
+                <p><strong>JavaScript</strong> ajoute de l'interactivité à la page : animations au scroll, gestion des clics, formulaires, menu mobile, etc.</p>
+            </div>
+
+            <!-- Sélection DOM -->
+            <div class="category">
+                <h3 class="category-title">Sélection d'éléments (DOM)</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">document.querySelector()</div>
+                        <p class="balise-desc">Sélectionne le premier élément correspondant au sélecteur CSS.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">const</span> menuToggle = <span class="function">document.querySelector</span>(<span class="string">'.menu-toggle'</span>);
+<span class="keyword">const</span> form = <span class="function">document.querySelector</span>(<span class="string">'#contactForm'</span>);</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">document.querySelectorAll()</div>
+                        <p class="balise-desc">Sélectionne tous les éléments correspondant au sélecteur. Retourne une NodeList.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">const</span> links = <span class="function">document.querySelectorAll</span>(<span class="string">'.nav-link'</span>);
+<span class="keyword">const</span> cards = <span class="function">document.querySelectorAll</span>(<span class="string">'.stage-card'</span>);</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">document.getElementById()</div>
+                        <p class="balise-desc">Sélectionne un élément par son ID unique.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">const</span> form = <span class="function">document.getElementById</span>(<span class="string">'contactForm'</span>);</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Événements -->
+            <div class="category">
+                <h3 class="category-title">Gestion des événements</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">addEventListener()</div>
+                        <p class="balise-desc">Écoute un événement sur un élément et exécute une fonction.</p>
+                        <div class="balise-example">
+                            <code>menuToggle.<span class="function">addEventListener</span>(<span class="string">'click'</span>, () => {
+  <span class="comment">// Code exécuté au clic</span>
+  menuToggle.classList.<span class="function">toggle</span>(<span class="string">'active'</span>);
+});</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">DOMContentLoaded</div>
+                        <p class="balise-desc">Événement déclenché quand le HTML est complètement chargé.</p>
+                        <div class="balise-example">
+                            <code><span class="function">document.addEventListener</span>(<span class="string">'DOMContentLoaded'</span>, () => {
+  <span class="comment">// Le DOM est prêt</span>
+  <span class="function">console.log</span>(<span class="string">'Page chargée !'</span>);
+});</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">submit</div>
+                        <p class="balise-desc">Événement déclenché à la soumission d'un formulaire.</p>
+                        <div class="balise-example">
+                            <code>form.<span class="function">addEventListener</span>(<span class="string">'submit'</span>, (e) => {
+  e.<span class="function">preventDefault</span>(); <span class="comment">// Empêche le rechargement</span>
+  <span class="comment">// Traitement du formulaire</span>
+});</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Classes CSS -->
+            <div class="category">
+                <h3 class="category-title">Manipulation des classes CSS</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">classList.add()</div>
+                        <p class="balise-desc">Ajoute une classe CSS à un élément.</p>
+                        <div class="balise-example">
+                            <code>element.classList.<span class="function">add</span>(<span class="string">'visible'</span>);
+element.classList.<span class="function">add</span>(<span class="string">'active'</span>);</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">classList.remove()</div>
+                        <p class="balise-desc">Supprime une classe CSS d'un élément.</p>
+                        <div class="balise-example">
+                            <code>element.classList.<span class="function">remove</span>(<span class="string">'active'</span>);</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">classList.toggle()</div>
+                        <p class="balise-desc">Ajoute la classe si absente, la supprime si présente.</p>
+                        <div class="balise-example">
+                            <code>menuToggle.classList.<span class="function">toggle</span>(<span class="string">'active'</span>);
+<span class="comment">// Parfait pour ouvrir/fermer un menu</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">classList.contains()</div>
+                        <p class="balise-desc">Vérifie si un élément possède une classe. Retourne true ou false.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">if</span> (element.classList.<span class="function">contains</span>(<span class="string">'active'</span>)) {
+  <span class="comment">// L'élément a la classe 'active'</span>
+}</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boucles -->
+            <div class="category">
+                <h3 class="category-title">Boucles</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">forEach()</div>
+                        <p class="balise-desc">Exécute une fonction pour chaque élément d'un tableau ou NodeList.</p>
+                        <div class="balise-example">
+                            <code><span class="function">document.querySelectorAll</span>(<span class="string">'.nav-link'</span>).<span class="function">forEach</span>(link => {
+  link.<span class="function">addEventListener</span>(<span class="string">'click'</span>, () => {
+    <span class="comment">// Action pour chaque lien</span>
+  });
+});</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intersection Observer -->
+            <div class="category">
+                <h3 class="category-title">Intersection Observer (animations au scroll)</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">IntersectionObserver</div>
+                        <p class="balise-desc">Détecte quand un élément entre dans la zone visible de l'écran. Utilisé pour les animations au scroll.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">const</span> observer = <span class="keyword">new</span> <span class="function">IntersectionObserver</span>((entries) => {
+  entries.<span class="function">forEach</span>(entry => {
+    <span class="keyword">if</span> (entry.isIntersecting) {
+      entry.target.classList.<span class="function">add</span>(<span class="string">'visible'</span>);
+    }
+  });
+}, { <span class="property">threshold</span>: <span class="value">0.1</span> });
+
+<span class="function">document.querySelectorAll</span>(<span class="string">'.fade-in'</span>).<span class="function">forEach</span>(el => {
+  observer.<span class="function">observe</span>(el);
+});</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Création d'éléments -->
+            <div class="category">
+                <h3 class="category-title">Création et modification d'éléments</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">document.createElement()</div>
+                        <p class="balise-desc">Crée un nouvel élément HTML.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">const</span> msg = <span class="function">document.createElement</span>(<span class="string">'div'</span>);
+msg.className = <span class="string">'success-message'</span>;
+msg.textContent = <span class="string">'Message envoyé !'</span>;</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">appendChild()</div>
+                        <p class="balise-desc">Ajoute un élément enfant à un élément parent.</p>
+                        <div class="balise-example">
+                            <code>form.<span class="function">appendChild</span>(msg);
+<span class="comment">// Ajoute msg à la fin du formulaire</span></code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">innerHTML</div>
+                        <p class="balise-desc">Définit ou récupère le contenu HTML d'un élément.</p>
+                        <div class="balise-example">
+                            <code>element.<span class="property">innerHTML</span> = <span class="string">`
+  &lt;svg&gt;...&lt;/svg&gt;
+  &lt;span&gt;Message envoyé&lt;/span&gt;
+`</span>;</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">textContent</div>
+                        <p class="balise-desc">Définit ou récupère le texte d'un élément (sans HTML).</p>
+                        <div class="balise-example">
+                            <code>counter.<span class="property">textContent</span> = <span class="value">42</span>;
+<span class="comment">// Affiche "42" dans l'élément</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fonctions fléchées -->
+            <div class="category">
+                <h3 class="category-title">Fonctions</h3>
+                <div class="balises-grid">
+                    <div class="balise-card">
+                        <div class="balise-name">Arrow function (=>)</div>
+                        <p class="balise-desc">Syntaxe courte pour écrire des fonctions.</p>
+                        <div class="balise-example">
+                            <code><span class="comment">// Fonction classique</span>
+<span class="keyword">function</span> <span class="function">maFonction</span>() { }
+
+<span class="comment">// Arrow function</span>
+<span class="keyword">const</span> maFonction = () => { };
+
+<span class="comment">// Avec paramètre</span>
+<span class="keyword">const</span> double = (x) => x * <span class="value">2</span>;</code>
+                        </div>
+                    </div>
+                    <div class="balise-card">
+                        <div class="balise-name">const / let</div>
+                        <p class="balise-desc"><code>const</code> pour les valeurs qui ne changent pas, <code>let</code> pour celles qui peuvent changer.</p>
+                        <div class="balise-example">
+                            <code><span class="keyword">const</span> PI = <span class="value">3.14</span>; <span class="comment">// Ne changera jamais</span>
+<span class="keyword">let</span> compteur = <span class="value">0</span>; <span class="comment">// Peut être modifié</span>
+compteur++; <span class="comment">// compteur = 1</span></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="doc-footer">
+        <p>Documentation Portfolio Anis Daouairi — BTS SIO SISR 2026</p>
+    </footer>
+
+</body>
+</html>

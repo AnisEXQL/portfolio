@@ -1,0 +1,489 @@
+/* ========================================
+   CERTIFICATIONS - STYLES PREMIUM
+   ======================================== */
+
+/* VIDÉO DE FOND */
+.certif-video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+}
+
+/* OVERLAY SOMBRE */
+.certif-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(4px);
+  z-index: -2;
+}
+
+/* SECTION PRINCIPALE */
+.certif-wrapper {
+  padding: 140px 40px 80px;
+  color: var(--text-white);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* TITRE PRINCIPAL */
+.certif-title {
+  font-family: var(--font-title);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 30px rgba(192,192,192,0.5);
+}
+
+/* ========================================
+   STATISTIQUES
+   ======================================== */
+.certif-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-family: var(--font-title);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--silver);
+  display: block;
+  text-shadow: 0 0 20px rgba(192,192,192,0.4);
+}
+
+.stat-label {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.stat-divider {
+  width: 2px;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, var(--silver), transparent);
+}
+
+/* SOUS-TITRE */
+.certif-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--text-gray);
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================
+   TITRES SECTIONS
+   ======================================== */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  font-family: var(--font-title);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 70px 0 40px;
+}
+
+.title-icon {
+  color: var(--silver);
+  flex-shrink: 0;
+}
+
+.section-title::before,
+.section-title::after {
+  content: '';
+  flex: 1;
+  max-width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--silver));
+}
+
+.section-title::after {
+  background: linear-gradient(90deg, var(--silver), transparent);
+}
+
+/* ========================================
+   GRILLE CERTIFICATIONS
+   ======================================== */
+.certif-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 35px;
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   CARTE CERTIFICATION
+   ======================================== */
+.certif-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(192,192,192,0.15);
+  border-radius: 20px;
+  padding: 35px 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.certif-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--silver), transparent);
+}
+
+.certif-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--silver);
+  box-shadow: 0 25px 50px rgba(192,192,192,0.15);
+}
+
+/* Badge statut */
+.certif-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certif-badge.obtained {
+  background: rgba(0, 200, 100, 0.2);
+  border: 2px solid rgba(0, 200, 100, 0.5);
+  color: #00c864;
+}
+
+.certif-badge.obtained svg {
+  stroke: #00c864;
+}
+
+/* Logo container */
+.certif-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.certif-logo {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 15px rgba(192,192,192,0.3));
+  transition: all 0.3s ease;
+}
+
+.certif-card:hover .certif-logo {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 25px rgba(192,192,192,0.5));
+}
+
+/* Contenu */
+.certif-content {
+  text-align: center;
+}
+
+.certif-content h3 {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  color: var(--text-white);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.certif-org {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--silver);
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.org-icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.certif-date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.certif-date svg {
+  color: var(--silver);
+}
+
+.certif-desc {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Skills tags */
+.certif-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--silver);
+  background: rgba(192,192,192,0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(192,192,192,0.2);
+}
+
+/* Bouton certificat */
+.certif-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: transparent;
+  border: 2px solid var(--silver);
+  color: var(--silver);
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.certif-btn:hover {
+  background: var(--silver);
+  color: var(--bg-black);
+  box-shadow: 0 0 25px rgba(192,192,192,0.4);
+}
+
+.certif-btn svg {
+  transition: transform 0.3s ease;
+}
+
+.certif-btn:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* ========================================
+   TIMELINE HORIZONTALE
+   ======================================== */
+.certif-timeline {
+  margin: 50px 0;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.timeline-track {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  position: relative;
+  padding: 0 40px;
+}
+
+.timeline-track::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--silver), rgba(192,192,192,0.3));
+}
+
+.timeline-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.point-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--bg-black);
+  border: 3px solid var(--silver);
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.timeline-point.completed .point-dot {
+  background: var(--silver);
+  box-shadow: 0 0 20px rgba(192,192,192,0.6);
+}
+
+.timeline-point.future .point-dot {
+  border-style: dashed;
+  opacity: 0.5;
+}
+
+.point-content {
+  text-align: center;
+}
+
+.point-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--silver);
+  margin-bottom: 5px;
+}
+
+.point-label {
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.timeline-point.completed .point-label {
+  color: var(--text-white);
+}
+
+.timeline-point.future .point-label {
+  opacity: 0.5;
+  font-style: italic;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+.anim-slide {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visible-slide {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.anim-fade {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.visible-fade {
+  opacity: 1;
+}
+
+.anim-zoom {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.visible-zoom {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Délai pour les cartes */
+.certif-card:nth-child(1) { transition-delay: 0.1s; }
+.certif-card:nth-child(2) { transition-delay: 0.2s; }
+.certif-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 900px) {
+  .certif-wrapper {
+    padding: 120px 20px 60px;
+  }
+
+  .certif-stats {
+    gap: 30px;
+  }
+
+  .stat-divider {
+    display: none;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .certif-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-track {
+    gap: 40px;
+    justify-content: flex-start;
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .certif-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section-title::before,
+  .section-title::after {
+    display: none;
+  }
+
+  .certif-stats {
+    flex-direction: column;
+    gap: 25px;
+  }
+}

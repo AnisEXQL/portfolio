@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets | Portfolio Anis Daouairi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-text">Portfolio Anis</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="projets.html" class="nav-link active">Projets</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="stages.html" class="nav-link">Stages</a></li>
+                    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille technologique</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <section class="projects-section">
+        <div class="projects-video-bg">
+            <video autoplay muted loop playsinline>
+                <source src="videos/projets-bg.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="projects-overlay"></div>
+        <div class="projects-content">
+            <h2 class="projects-title">Mes projets</h2>
+            <div class="projects-grid">
+
+                <article class="project-card fade-in">
+                    <div class="project-image-container">
+                        <img src="images/GSB.png" alt="Infrastructure" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Infrastructure GSB</h3>
+                        <p class="project-description">Mise en place d'une infrastructure réseau complète intégrant des serveurs Proxmox, un routeur pfSense, un Active Directory et une segmentation VLAN pour l'entreprise GSB.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Proxmox</span>
+                            <span class="project-tag">pfSense</span>
+                            <span class="project-tag">VLAN</span>
+                            <span class="project-tag">Active Directory</span>
+                            <span class="project-tag">DNS</span>
+                            <span class="project-tag">DHCP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=400&fit=crop" alt="Site web" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Site AMD Coiffure</h3>
+                        <p class="project-description">Création d'un site web professionnel pour un salon de coiffure masculin, avec un design moderne, responsive et un système de réservation intégré.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                        </div>
+                        <a href="https://amdcoiffuresorgues.fr" target="_blank" class="project-btn">
+                            <span>Voir le site</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-image-container">
+                        <img src="https://images.unsplash.com/photo-1507608616759-54f48f0af0ee?w=600&h=400&fit=crop" alt="Agence de voyage" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Agence Sweet France</h3>
+                        <p class="project-description">Projet complet pour une agence de voyage : configuration de postes Windows, déploiement d'un serveur web IIS avec PHP, et création d'une base de données MySQL avec interface de gestion.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Windows Server</span>
+                            <span class="project-tag">IIS</span>
+                            <span class="project-tag">PHP</span>
+                            <span class="project-tag">MySQL</span>
+                            <span class="project-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card fade-in">
+                    <div class="project-image-container">
+                        <img src="images/Pi-hole.png" alt="Pi-hole Raspberry" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Blocage publicitaire réseau</h3>
+                        <p class="project-description">Projet personnel de mise en place d'un serveur Pi-hole sur Raspberry Pi pour bloquer les publicités sur l'ensemble du réseau local via une redirection DNS filtrant les domaines publicitaires.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Raspberry Pi</span>
+                            <span class="project-tag">Pi-hole</span>
+                            <span class="project-tag">DNS</span>
+                            <span class="project-tag">Linux</span>
+                            <span class="project-tag">Réseau</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-portfolio">
+        <div class="footer-grid">
+
+            <div class="footer-col">
+                <img src="images/logo.png" alt="Logo Anis" class="footer-logo">
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html" class="active">Projets</a></li>
+                    <li><a href="parcours.html">Parcours</a></li>
+                    <li><a href="stages.html">Stages</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3 class="footer-heading">Informations</h3>
+                <p class="footer-copy">&copy; 2026 Portfolio Anis Daouairi — BTS SIO SISR</p>
+                <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

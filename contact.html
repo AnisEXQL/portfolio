@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Portfolio Anis Daouairi</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+
+    <video autoplay muted loop playsinline class="contact-video-bg">
+        <source src="videos/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="contact-overlay"></div>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-text">Portfolio Anis</a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="projets.html" class="nav-link">Projets</a></li>
+                    <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+                    <li><a href="stages.html" class="nav-link">Stages</a></li>
+                    <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                    <li><a href="veille.html" class="nav-link">Veille technologique</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </header>
+
+    <section class="contact-wrapper">
+
+        <h1 class="contact-title fade-in">Me Contacter</h1>
+
+        <div class="contact-grid">
+
+            <div class="contact-info fade-in">
+                <h2>Informations</h2>
+                <p>Je suis disponible pour toute opportunité, question ou échange professionnel.</p>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                        <span>14 Rue de la Palapharnerie, 84000 Avignon</span>
+                    </div>
+                    <div class="contact-item email-protected">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <span class="email-blur" id="emailBlur">••••••••••@••••••.com</span>
+                        <button class="btn-reveal-email" id="btnRevealEmail">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Révéler
+                        </button>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                        </svg>
+                        <span>BTS SIO SISR – Lycée Théodore Aubanel</span>
+                    </div>
+                    <div class="contact-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        <span>Disponible pour alternance / emploi</span>
+                    </div>
+                </div>
+
+                <div class="contact-buttons fade-in">
+                    <button class="btn-cv btn-cv-protected" id="btnViewCV">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                        <span>Consulter mon CV</span>
+                    </button>
+                    <button class="btn-cv btn-cv-protected" id="btnDownloadCV">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Télécharger mon CV (PDF)</span>
+                    </button>
+                    <a href="https://github.com/AnisEXQL" target="_blank" class="btn-cv btn-github">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>Mon GitHub</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <form class="contact-form fade-in" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" placeholder="Votre email" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Entreprise / Organisation</label>
+                    <input type="text" id="company" placeholder="Facultatif">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Sujet</label>
+                    <select id="subject" required>
+                        <option value="" disabled selected>Choisir un sujet</option>
+                        <option value="alternance">Proposition d'alternance</option>
+                        <option value="emploi">Opportunité d'emploi</option>
+                        <option value="projet">Projet de collaboration</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Votre message" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                    <span>Envoyer le message</span>
+                </button>
+            </form>
+
+        </div>
+
+        <div class="contact-separator fade-in"></div>
+
+        <h2 class="contact-map-title fade-in">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Localisation – Lycée Théodore Aubanel
+        </h2>
+
+        <div class="contact-map fade-in">
+            <iframe 
+                width="100%" 
+                height="350" 
+                style="border:0; border-radius:15px;"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=14+Rue+de+la+Palapharnerie,+84000+Avignon&output=embed">
+            </iframe>
+        </div>
+
+        <p class="contact-thanks fade-in">Merci pour votre visite.</p>
+
+    </section>
+
+    <!-- MODAL CAPTCHA -->
+    <div class="captcha-modal" id="captchaModal">
+        <div class="captcha-content">
+            <h3 id="captchaTitle">Vérification anti-robot</h3>
+            <p id="captchaDesc">Résolvez ce calcul pour continuer :</p>
+            <div class="captcha-question" id="captchaQuestion"></div>
+            <input type="number" id="captchaAnswer" placeholder="Votre réponse" autocomplete="off">
+            <div class="captcha-buttons">
+                <button class="btn-captcha-cancel" id="btnCaptchaCancel">Annuler</button>
+                <button class="btn-captcha-submit" id="btnCaptchaSubmit">Vérifier</button>
+            </div>
+            <p class="captcha-error" id="captchaError"></p>
+            <p class="captcha-attempts" id="captchaAttempts"></p>
+        </div>
+    </div>
+
+    <!-- MODAL BLOQUÉ -->
+    <div class="blocked-modal" id="blockedModal">
+        <div class="blocked-content">
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
+            </svg>
+            <h3>Accès bloqué</h3>
+            <p>Trop de tentatives échouées. Veuillez réessayer plus tard.</p>
+            <button class="btn-blocked-close" id="btnBlockedClose">Fermer</button>
+        </div>
+    </div>
+
+    <footer class="footer-portfolio">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="images/logo.png" alt="Logo Anis" class="footer-logo">
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Navigation</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="projets.html">Projets</a></li>
+                    <li><a href="parcours.html">Parcours</a></li>
+                    <li><a href="stages.html">Stages</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="veille.html">Veille</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3 class="footer-heading">Informations</h3>
+                <p class="footer-copy">&copy; 2026 Portfolio Anis Daouairi – BTS SIO SISR</p>
+                <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".fade-in").forEach(el => {
+                el.classList.add("visible");
+            });
+
+            // Variables globales
+            const email = "daouairianis84@gmail.com";
+            const cvUrl = "documents/cv-anis.pdf";
+            let attempts = 0;
+            const maxAttempts = 3;
+            let isBlocked = localStorage.getItem('captchaBlocked') === 'true';
+            let currentAction = null;
+
+            // Éléments DOM
+            const btnRevealEmail = document.getElementById("btnRevealEmail");
+            const emailBlur = document.getElementById("emailBlur");
+            const btnViewCV = document.getElementById("btnViewCV");
+            const btnDownloadCV = document.getElementById("btnDownloadCV");
+            const captchaModal = document.getElementById("captchaModal");
+            const captchaTitle = document.getElementById("captchaTitle");
+            const captchaDesc = document.getElementById("captchaDesc");
+            const captchaQuestion = document.getElementById("captchaQuestion");
+            const captchaAnswer = document.getElementById("captchaAnswer");
+            const captchaError = document.getElementById("captchaError");
+            const captchaAttempts = document.getElementById("captchaAttempts");
+            const btnCaptchaSubmit = document.getElementById("btnCaptchaSubmit");
+            const btnCaptchaCancel = document.getElementById("btnCaptchaCancel");
+            const blockedModal = document.getElementById("blockedModal");
+            const btnBlockedClose = document.getElementById("btnBlockedClose");
+
+            let num1, num2, correctAnswer;
+
+            // Vérifier si bloqué au chargement
+            if (isBlocked) {
+                disableProtectedButtons();
+            }
+
+            function disableProtectedButtons() {
+                btnRevealEmail.disabled = true;
+                btnRevealEmail.classList.add("disabled");
+                btnViewCV.disabled = true;
+                btnViewCV.classList.add("disabled");
+                btnDownloadCV.disabled = true;
+                btnDownloadCV.classList.add("disabled");
+            }
+
+            function generateCaptcha() {
+                num1 = Math.floor(Math.random() * 10) + 1;
+                num2 = Math.floor(Math.random() * 10) + 1;
+                correctAnswer = num1 + num2;
+                captchaQuestion.textContent = `${num1} + ${num2} = ?`;
+                captchaAnswer.value = "";
+                captchaError.textContent = "";
+                updateAttemptsDisplay();
+            }
+
+            function updateAttemptsDisplay() {
+                const remaining = maxAttempts - attempts;
+                if (remaining <= 2 && remaining > 0) {
+                    captchaAttempts.textContent = `${remaining} tentative(s) restante(s)`;
+                    captchaAttempts.style.color = remaining === 1 ? "#ff6b6b" : "#ffaa00";
+                } else {
+                    captchaAttempts.textContent = "";
+                }
+            }
+
+            function openCaptcha(action, title, desc) {
+                if (isBlocked) {
+                    blockedModal.classList.add("active");
+                    return;
+                }
+                currentAction = action;
+                captchaTitle.textContent = title;
+                captchaDesc.textContent = desc;
+                generateCaptcha();
+                captchaModal.classList.add("active");
+                captchaAnswer.focus();
+            }
+
+            function blockUser() {
+                isBlocked = true;
+                localStorage.setItem('captchaBlocked', 'true');
+                captchaModal.classList.remove("active");
+                blockedModal.classList.add("active");
+                disableProtectedButtons();
+            }
+
+            // Email reveal
+            btnRevealEmail.addEventListener("click", () => {
+                openCaptcha("email", "Vérification anti-robot", "Résolvez ce calcul pour voir l'email :");
+            });
+
+            // CV buttons
+            btnViewCV.addEventListener("click", () => {
+                openCaptcha("viewCV", "Vérification anti-robot", "Résolvez ce calcul pour consulter le CV :");
+            });
+
+            btnDownloadCV.addEventListener("click", () => {
+                openCaptcha("downloadCV", "Vérification anti-robot", "Résolvez ce calcul pour télécharger le CV :");
+            });
+
+            // Captcha submit
+            btnCaptchaSubmit.addEventListener("click", () => {
+                const userAnswer = parseInt(captchaAnswer.value);
+                
+                if (userAnswer === correctAnswer) {
+                    attempts = 0;
+                    captchaModal.classList.remove("active");
+
+                    if (currentAction === "email") {
+                        emailBlur.textContent = email;
+                        emailBlur.classList.add("revealed");
+                        btnRevealEmail.style.display = "none";
+                    } else if (currentAction === "viewCV") {
+                        window.open(cvUrl, "_blank");
+                    } else if (currentAction === "downloadCV") {
+                        const link = document.createElement("a");
+                        link.href = cvUrl;
+                        link.download = "cv-anis-daouairi.pdf";
+                        link.click();
+                    }
+                } else {
+                    attempts++;
+                    if (attempts >= maxAttempts) {
+                        blockUser();
+                    } else {
+                        captchaError.textContent = "Mauvaise réponse, réessayez.";
+                        generateCaptcha();
+                    }
+                }
+            });
+
+            // Captcha cancel
+            btnCaptchaCancel.addEventListener("click", () => {
+                captchaModal.classList.remove("active");
+            });
+
+            // Enter key
+            captchaAnswer.addEventListener("keypress", (e) => {
+                if (e.key === "Enter") {
+                    btnCaptchaSubmit.click();
+                }
+            });
+
+            // Close blocked modal
+            btnBlockedClose.addEventListener("click", () => {
+                blockedModal.classList.remove("active");
+            });
+
+            // Formulaire contact
+            const form = document.getElementById("contactForm");
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                const oldMsg = form.querySelector(".success-message");
+                if (oldMsg) oldMsg.remove();
+
+                const msg = document.createElement("div");
+                msg.innerHTML = `
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                    <span>Votre message a bien été envoyé</span>
+                `;
+                msg.className = "success-message";
+                form.appendChild(msg);
+
+                form.reset();
+            });
+        });
+
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (
+                e.key === 'F12' ||
+                (e.ctrlKey && e.key === 'u') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+                (e.ctrlKey && e.shiftKey && e.key === 'J')
+            ) {
+                e.preventDefault();
+            }
+        });
+
+        document.addEventListener('dragstart', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

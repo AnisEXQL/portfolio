@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veille technologique | Portfolio Anis Daouairi</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/veille.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+</head>
+
+<body>
+
+  <!-- VIDÉO DE FOND -->
+  <video autoplay muted loop playsinline class="veille-video-bg">
+    <source src="videos/background.mp4" type="video/mp4">
+  </video>
+
+  <!-- OVERLAY SOMBRE -->
+  <div class="veille-overlay"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-container">
+      <a href="index.html" class="logo-text">Portfolio Anis</a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Accueil</a></li>
+          <li><a href="projets.html" class="nav-link">Projets</a></li>
+          <li><a href="parcours.html" class="nav-link">Parcours</a></li>
+          <li><a href="stages.html" class="nav-link">Stages</a></li>
+          <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+          <li><a href="veille.html" class="nav-link active">Veille technologique</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="menu-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </header>
+
+  <!-- SECTION VEILLE -->
+  <section class="veille-wrapper">
+
+    <h1 class="veille-title anim-slide">Veille technologique</h1>
+
+    <p class="veille-subtitle anim-fade">
+      Sujet : <span class="tag">Zero Trust Architecture — La fin du périmètre réseau traditionnel</span>
+    </p>
+
+    <!-- INTRO + POURQUOI CE SUJET -->
+    <div class="veille-intro-grid">
+
+      <div class="veille-intro-card anim-zoom">
+        <div class="card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+        </div>
+        <h2>Contexte du sujet</h2>
+        <p>
+          Le modèle <strong>Zero Trust</strong> ("Ne jamais faire confiance, toujours vérifier") révolutionne la cybersécurité. 
+          Avec le télétravail massif, le cloud et les cyberattaques sophistiquées, le périmètre réseau traditionnel (firewall = protection) est obsolète.
+        </p>
+        <p>
+          Zero Trust impose une vérification continue de chaque utilisateur, appareil et connexion, même à l'intérieur du réseau.
+        </p>
+      </div>
+
+      <div class="veille-intro-card anim-zoom">
+        <div class="card-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+        </div>
+        <h2>Pourquoi ce sujet ?</h2>
+        <ul>
+          <li><strong>Tendance majeure :</strong> Gartner prédit que 60% des entreprises adopteront Zero Trust d'ici 2025.</li>
+          <li><strong>Lien SISR :</strong> Active Directory, VPN, segmentation réseau, authentification MFA.</li>
+          <li><strong>Peu choisi :</strong> Sujet technique et récent, différent des classiques "ransomware" ou "cloud".</li>
+          <li><strong>Avenir :</strong> Compétence recherchée sur le marché de l'emploi IT.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- PRINCIPES ZERO TRUST -->
+    <h2 class="veille-section-title anim-slide">Les 5 piliers du Zero Trust</h2>
+    
+    <div class="pillars-grid anim-fade">
+      <div class="pillar-card">
+        <div class="pillar-number">01</div>
+        <h3>Identité</h3>
+        <p>Vérification forte de l'identité (MFA, SSO, biométrie) avant tout accès.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">02</div>
+        <h3>Appareils</h3>
+        <p>Contrôle de conformité des endpoints (MDM, EDR, état de sécurité).</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">03</div>
+        <h3>Réseau</h3>
+        <p>Micro-segmentation, chiffrement de bout en bout, pas de confiance implicite.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">04</div>
+        <h3>Applications</h3>
+        <p>Accès conditionnel basé sur le contexte, API sécurisées, conteneurisation.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">05</div>
+        <h3>Données</h3>
+        <p>Classification, chiffrement, DLP (Data Loss Prevention), audit permanent.</p>
+      </div>
+    </div>
+
+    <!-- LIEN CEJM -->
+    <h2 class="veille-section-title anim-slide">Lien avec la CEJM</h2>
+    
+    <div class="cejm-grid anim-fade">
+      <div class="cejm-card">
+        <div class="cejm-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+        </div>
+        <h3>Économique</h3>
+        <p>Réduction des coûts liés aux incidents (en moyenne 4,35M$ par breach en 2023). ROI prouvé du Zero Trust.</p>
+      </div>
+      <div class="cejm-card">
+        <div class="cejm-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 3v18"></path>
+                <path d="M5 7l7-4 7 4"></path>
+                <path d="M5 7v6a7 7 0 0 0 7 7 7 7 0 0 0 7-7V7"></path>
+                <circle cx="5" cy="13" r="2"></circle>
+                <circle cx="19" cy="13" r="2"></circle>
+            </svg>
+        </div>
+        <h3>Juridique</h3>
+        <p>Conformité RGPD, NIS2, exigences de traçabilité. Protection des données personnelles obligatoire.</p>
+      </div>
+      <div class="cejm-card">
+        <div class="cejm-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+        </div>
+        <h3>Managérial</h3>
+        <p>Changement de culture : sensibilisation des employés, gestion du changement, nouvelles politiques d'accès.</p>
+      </div>
+      <div class="cejm-card">
+        <div class="cejm-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+        </div>
+        <h3>Stratégique</h3>
+        <p>Avantage concurrentiel, confiance des clients, résilience face aux menaces, transformation digitale.</p>
+      </div>
+    </div>
+
+    <!-- OUTILS DE VEILLE -->
+    <h2 class="veille-section-title anim-slide">Outils de veille utilisés</h2>
+    
+    <div class="tools-grid anim-fade">
+      <div class="tool-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg" alt="Google Alerts" class="tool-logo">
+        <h3>Google Alerts</h3>
+        <p>Alertes email automatiques sur "Zero Trust", "ZTNA", "cybersecurity architecture".</p>
+      </div>
+      <div class="tool-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg" alt="Twitter/X" class="tool-logo">
+        <h3>Twitter / X</h3>
+        <p>Suivi des experts : @ABORDEAUX, @CISOresilience, @zeabordeaux, hashtag #ZeroTrust.</p>
+      </div>
+      <div class="tool-card">
+        <img src="images/feedly.png" alt="Feedly" class="tool-logo">
+        <h3>Feedly</h3>
+        <p>Agrégateur RSS centralisant CERT-FR, Krebs on Security, The Hacker News, Bleeping Computer.</p>
+      </div>
+      <div class="tool-card">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" alt="LinkedIn" class="tool-logo">
+        <h3>LinkedIn</h3>
+        <p>Groupes professionnels cybersécurité, articles d'experts, veille sectorielle.</p>
+      </div>
+      <div class="tool-card">
+        <img src="images/reddit.png" alt="Reddit" class="tool-logo">
+        <h3>Reddit</h3>
+        <p>Subreddits r/netsec, r/cybersecurity, r/zerotrust pour discussions techniques.</p>
+      </div>
+      <div class="tool-card">
+        <img src="images/anssi.png" alt="ANSSI" class="tool-logo">
+        <h3>CERT-FR / ANSSI</h3>
+        <p>Bulletins officiels de sécurité, alertes CVE, recommandations nationales.</p>
+      </div>
+    </div>
+
+    <!-- FLUX RSS EN TEMPS RÉEL -->
+    <h2 class="veille-section-title anim-slide">Actualités en temps réel</h2>
+    
+    <p class="veille-rss-note anim-fade">
+      Flux RSS automatisé — Sélectionnez une source pour voir les dernières actualités cybersécurité
+    </p>
+
+    <!-- Onglets sources -->
+    <div class="rss-tabs anim-fade">
+      <button class="rss-tab active" data-source="cert">CERT-FR</button>
+      <button class="rss-tab" data-source="hacker">The Hacker News</button>
+      <button class="rss-tab" data-source="bleeping">Bleeping Computer</button>
+    </div>
+
+    <div class="veille-rss-container anim-fade">
+      <div class="rss-refresh">
+        <span id="lastUpdate">Chargement...</span>
+        <button class="refresh-btn" id="refreshBtn">
+          <svg class="refresh-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"/>
+            <path d="M21 3v5h-5"/>
+          </svg>
+          Actualiser
+        </button>
+      </div>
+      <ul class="veille-rss-list" id="rssList">
+        <li class="rss-loading">
+          <div class="loading-spinner"></div>
+          Chargement des actualités...
+        </li>
+      </ul>
+    </div>
+
+    <!-- ANALYSE SWOT -->
+    <h2 class="veille-section-title anim-slide">Analyse SWOT du Zero Trust</h2>
+    
+    <div class="swot-container anim-fade">
+      <div class="swot-card strengths">
+        <div class="swot-header">
+          <div class="swot-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              <path d="M9 12l2 2 4-4"></path>
+            </svg>
+          </div>
+          <h3>Forces</h3>
+        </div>
+        <ul>
+          <li>Sécurité renforcée contre les menaces internes et externes</li>
+          <li>Visibilité complète sur tous les accès et activités</li>
+          <li>Adapté au cloud et au travail hybride</li>
+          <li>Réduction de la surface d'attaque</li>
+        </ul>
+      </div>
+
+      <div class="swot-card weaknesses">
+        <div class="swot-header">
+          <div class="swot-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="8" x2="12" y2="12"></line>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+          </div>
+          <h3>Faiblesses</h3>
+        </div>
+        <ul>
+          <li>Coût d'implémentation élevé</li>
+          <li>Complexité de déploiement</li>
+          <li>Résistance au changement des utilisateurs</li>
+          <li>Nécessite une refonte de l'infrastructure</li>
+        </ul>
+      </div>
+
+      <div class="swot-card opportunities">
+        <div class="swot-header">
+          <div class="swot-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2v4"></path>
+              <path d="M12 18v4"></path>
+              <path d="M4.93 4.93l2.83 2.83"></path>
+              <path d="M16.24 16.24l2.83 2.83"></path>
+              <path d="M2 12h4"></path>
+              <path d="M18 12h4"></path>
+              <path d="M4.93 19.07l2.83-2.83"></path>
+              <path d="M16.24 7.76l2.83-2.83"></path>
+            </svg>
+          </div>
+          <h3>Opportunités</h3>
+        </div>
+        <ul>
+          <li>Conformité réglementaire (RGPD, NIS2)</li>
+          <li>Marché en forte croissance</li>
+          <li>Solutions SaaS accessibles (Azure AD, Okta)</li>
+          <li>Différenciation concurrentielle</li>
+        </ul>
+      </div>
+
+      <div class="swot-card threats">
+        <div class="swot-header">
+          <div class="swot-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <h3>Menaces</h3>
+        </div>
+        <ul>
+          <li>Évolution rapide des cybermenaces</li>
+          <li>Pénurie de compétences en cybersécurité</li>
+          <li>Faux sentiment de sécurité si mal implémenté</li>
+          <li>Dépendance aux fournisseurs cloud</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <h2 class="veille-section-title anim-slide">Évolution du Zero Trust</h2>
+    
+    <div class="timeline-container anim-fade">
+      <div class="timeline-item">
+        <div class="timeline-date">2010</div>
+        <div class="timeline-content">
+          <h3>Naissance du concept</h3>
+          <p>John Kindervag (Forrester) introduit le terme "Zero Trust" et ses principes fondamentaux.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2014</div>
+        <div class="timeline-content">
+          <h3>Google BeyondCorp</h3>
+          <p>Google déploie BeyondCorp en interne, prouvant la viabilité du modèle à grande échelle.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2020</div>
+        <div class="timeline-content">
+          <h3>Accélération COVID</h3>
+          <p>Le télétravail massif force les entreprises à repenser leur sécurité périmétrique.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2021</div>
+        <div class="timeline-content">
+          <h3>Directive US</h3>
+          <p>Biden signe un décret imposant Zero Trust aux agences fédérales américaines.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2024</div>
+        <div class="timeline-content">
+          <h3>Standard de facto</h3>
+          <p>Zero Trust devient le framework de référence pour la cybersécurité moderne.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCLUSION -->
+    <div class="conclusion-card anim-zoom">
+      <h2>Conclusion</h2>
+      <p>
+        Le Zero Trust n'est plus une option mais une nécessité. Face à l'évolution des menaces et la transformation digitale des entreprises, 
+        ce modèle offre une approche de sécurité adaptée aux enjeux actuels.
+      </p>
+      <p>
+        Pour un futur technicien SISR, maîtriser ces concepts est un atout majeur : Active Directory conditionnel, 
+        segmentation réseau, MFA, et monitoring sont au cœur des infrastructures modernes.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-portfolio">
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <img src="images/logo.png" alt="Logo Anis" class="footer-logo">
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="projets.html">Projets</a></li>
+          <li><a href="parcours.html">Parcours</a></li>
+          <li><a href="stages.html">Stages</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="veille.html" class="active">Veille</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 class="footer-heading">Informations</h3>
+        <p class="footer-copy">&copy; 2026 Portfolio Anis Daouairi — BTS SIO SISR</p>
+        <p class="footer-legal"><a href="mentions-legales.html">Mentions légales</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPT ANIMATIONS + RSS MULTI-SOURCES -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains('anim-slide')) {
+              entry.target.classList.add('visible-slide');
+            }
+            if (entry.target.classList.contains('anim-fade')) {
+              entry.target.classList.add('visible-fade');
+            }
+            if (entry.target.classList.contains('anim-zoom')) {
+              entry.target.classList.add('visible-zoom');
+            }
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.anim-slide, .anim-fade, .anim-zoom').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Configuration des sources RSS
+      const rssSources = {
+        cert: {
+          url: "https://www.cert.ssi.gouv.fr/feed/",
+          name: "CERT-FR"
+        },
+        hacker: {
+          url: "https://feeds.feedburner.com/TheHackersNews",
+          name: "The Hacker News"
+        },
+        bleeping: {
+          url: "https://www.bleepingcomputer.com/feed/",
+          name: "Bleeping Computer"
+        }
+      };
+
+      let currentSource = 'cert';
+      const rssList = document.getElementById("rssList");
+      const lastUpdate = document.getElementById("lastUpdate");
+      const refreshBtn = document.getElementById("refreshBtn");
+      const tabs = document.querySelectorAll(".rss-tab");
+
+      // Fonction pour charger le RSS
+      function loadRSS(source) {
+        const rssConfig = rssSources[source];
+        const proxy = "https://api.allorigins.win/raw?url=" + encodeURIComponent(rssConfig.url);
+        
+        rssList.innerHTML = `
+          <li class="rss-loading">
+            <div class="loading-spinner"></div>
+            Chargement depuis ${rssConfig.name}...
+          </li>
+        `;
+
+        fetch(proxy)
+          .then(r => r.text())
+          .then(str => (new DOMParser()).parseFromString(str, "text/xml"))
+          .then(data => {
+            const items = data.querySelectorAll("item");
+            rssList.innerHTML = "";
+            let count = 0;
+
+            items.forEach(item => {
+              if (count >= 8) return;
+
+              const title = item.querySelector("title")?.textContent || "Sans titre";
+              const link = item.querySelector("link")?.textContent || "#";
+              const pubDate = item.querySelector("pubDate")?.textContent;
+              const description = item.querySelector("description")?.textContent || "";
+              
+              // Nettoyer la description
+              const cleanDesc = description.replace(/<[^>]*>/g, '').substring(0, 150) + '...';
+              
+              // Formater la date
+              let formattedDate = "Date inconnue";
+              if (pubDate) {
+                const date = new Date(pubDate);
+                formattedDate = date.toLocaleDateString('fr-FR', {
+                  day: 'numeric',
+                  month: 'long',
+                  year: 'numeric',
+                  hour: '2-digit',
+                  minute: '2-digit'
+                });
+              }
+
+              const li = document.createElement("li");
+              li.className = "rss-item";
+              li.innerHTML = `
+                <a href="${link}" target="_blank" class="rss-title">${title}</a>
+                <p class="rss-desc">${cleanDesc}</p>
+                <div class="rss-meta">
+                  <span class="rss-date">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                      <line x1="16" y1="2" x2="16" y2="6"></line>
+                      <line x1="8" y1="2" x2="8" y2="6"></line>
+                      <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    ${formattedDate}
+                  </span>
+                  <span class="rss-source">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 11a9 9 0 0 1 9 9"></path>
+                      <path d="M4 4a16 16 0 0 1 16 16"></path>
+                      <circle cx="5" cy="19" r="1"></circle>
+                    </svg>
+                    ${rssConfig.name}
+                  </span>
+                </div>
+              `;
+              rssList.appendChild(li);
+              count++;
+            });
+
+            // Mettre à jour l'heure
+            const now = new Date();
+            lastUpdate.textContent = `Dernière mise à jour : ${now.toLocaleTimeString('fr-FR')}`;
+          })
+          .catch(err => {
+            rssList.innerHTML = `
+              <li class='rss-error'>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="15" y1="9" x2="9" y2="15"></line>
+                  <line x1="9" y1="9" x2="15" y2="15"></line>
+                </svg>
+                Impossible de charger les actualités depuis ${rssConfig.name}.<br>
+                <small>Vérifiez votre connexion internet.</small>
+              </li>
+            `;
+          });
+      }
+
+      // Gestion des onglets
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          currentSource = tab.dataset.source;
+          loadRSS(currentSource);
+        });
+      });
+
+      // Bouton refresh
+      refreshBtn.addEventListener('click', () => {
+        refreshBtn.classList.add('spinning');
+        loadRSS(currentSource);
+        setTimeout(() => refreshBtn.classList.remove('spinning'), 1000);
+      });
+
+      // Charger au démarrage
+      loadRSS(currentSource);
+
+      // Auto-refresh toutes les 5 minutes
+      setInterval(() => loadRSS(currentSource), 300000);
+
+    });
+
+    document.addEventListener('contextmenu', (e) => {
+      e.preventDefault();
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && e.key === 'u') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'C') ||
+        (e.ctrlKey && e.shiftKey && e.key === 'J')
+      ) {
+        e.preventDefault();
+      }
+    });
+
+    document.addEventListener('dragstart', (e) => {
+      if (e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    });
+  </script>
+
+</body>
+</html>
